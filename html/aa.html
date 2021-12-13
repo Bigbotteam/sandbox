@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <title>Modal Popup Box</title>
+  <style>
+
+/* button:hover {
+  cursor: pointer;
+} */
+
+/* common styles end */
+
+/* modal part */
+/* #modal-background {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+} */
+
+/* #modal {
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  font-size: 1.5rem;
+  animation-name: animatemodal;
+  animation-duration: 0.4s;
+} */
+
+
+
+/* #close-btn {
+  align-self: flex-end;
+} */
+
+/* #close-btn:hover {
+  cursor: pointer;
+  color: #ff0000;
+} */
+
+/* modal part end */
+
+/* animation part */
+/* @keyframes animatemodal {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 50%;
+    opacity: 1;
+  }
+} */
+/* animation part end */
+body{
+  background: wheat;
+}
+  </style>
+</head>
+<body>
+  
+  <!-- Modal Open Button -->
+  <!-- <button id="open-btn">
+    OPEN THE MODAL
+  </button> -->
+
+  <!-- Modal Background and Modal -->
+  <!-- <div id="modal-background">
+    <div id="modal">
+      <span id="close-btn">&times;</span>
+      <p>HOWDY FOLKS!</p>
+     
+    </div>
+  </div> -->
+
+  <button>
+    <span>
+    <a href="#">Download</a>
+  </span>
+  <span class="" >
+    <img style="margin-top: -1rem;" src="../assets//images/fullarrow.png" alt="">
+  </span>
+  </button>
+  <!-- <script>
+      // select the open-btn button
+let openBtn = document.getElementById('open-btn');
+// select the modal-background
+let modalBackground = document.getElementById('modal-background');
+// select the close-btn 
+let closeBtn = document.getElementById('close-btn');
+
+// shows the modal when the user clicks open-btn
+openBtn.addEventListener('click', function() {
+  modalBackground.style.display = 'block';
+});
+
+// hides the modal when the user clicks close-btn
+closeBtn.addEventListener('click', function() {
+  modalBackground.style.display = 'none';
+});
+
+// hides the modal when the user clicks outside the modal
+window.addEventListener('click', function(event) {
+  // check if the event happened on the modal-background
+  if (event.target === modalBackground) {
+    // hides the modal
+    modalBackground.style.display = 'none';
+  }
+});
+  </script> -->
+</body>
+</html>

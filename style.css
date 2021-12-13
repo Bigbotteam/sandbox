@@ -1,0 +1,166 @@
+/* 
+Theme Name: Vested
+Theme URI: https://github.com/PethsDigital/vested
+Description: Vested Theme is the theme for Vested
+Author: Geektutor
+Author URI: https://peths.digital/
+Template: hello-elementor
+Version: 1.0.4
+Text Domain: hello-elementor-child
+License: GNU General Public License v3 or later.
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
+Tags: flexible-header, custom-colors, custom-menu, custom-logo, editor-style, featured-images, rtl-language-support, threaded-comments, translation-ready
+*/
+
+/*
+    Add your custom styles here
+*/
+
+label{
+display: block;
+    color: #243b41;
+    font-size: 13px;
+}
+
+.lead-title h1{
+	font-family: "Tiempos Headline", Sans-serif;
+    font-size: 22px;
+}
+.resource-title div h1{
+	font-family: "Tiempos Headline", Sans-serif;
+    font-size: 22px;
+}
+.resource-title div h1 a{
+	font-family:inherit;
+    font-size: inherit;
+}
+.side-title div h1{
+	font-family: "Tiempos Headline", Sans-serif;
+    font-size: 17px;
+}
+
+.lead-title div h1 a{
+	font-family:inherit;
+    font-size: inherit;
+}
+
+.side-title div h1 a{
+	font-family:inherit;
+    font-size: inherit;
+}
+
+@media screen and (max-width: 768px){
+	.lead-title div h1{
+	
+    font-size: 18px;
+}
+	.side-title div h1{
+	
+    font-size: 18px;
+}
+	.resource-title div h1{
+	
+    font-size: 18px;
+}
+}
+
+input[type=date], input[type=email], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=url], select, textarea {
+    width: 100%;
+    border-radius: 3px;
+    padding: 10px 5px;
+    border: 1px solid #e5e5e5;
+    background: rgba(229,229,229,0.2);
+    display: block;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+
+input::placeholder {
+  color: rgba(127, 127, 127, 0.6);
+  font-family: Aktiv Grotesk;
+  font-size: 10px;
+}
+
+textarea::placeholder {
+  color: rgba(127, 127, 127, 0.6);
+  font-family: Aktiv Grotesk;
+  font-size: 10px;
+}
+.wpcf7-form-control-wrap {
+    display:block;
+margin-top:5px;
+position:relative;
+}
+
+.pd-footer .top-section form label {
+    margin-right: 3px;
+}
+.pd-contact-form input[type="submit"]{
+	width: 100% !important;
+}
+.pd-footer .top-section form input[type="submit"].wpcf7-form-control.wpcf7-submit,.pd-contact-form input[type="submit"] {
+    padding: 10px 0px;
+    border: transparent;
+    -webkit-transition: ease 0.3s;
+    transition: ease 0.3s;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 1rem;
+    background: #e26d48;
+    color: white;
+    width: 200px;
+    font-size: 14px;
+    padding: 0 12px;
+    height: 40px;
+}
+
+@media screen and (max-width: 768px){
+.pd-footer .top-section .subscribe form input, .pd-footer .top-section form input[type="submit"].wpcf7-form-control.wpcf7-submit {
+    width: 100% !important;
+    margin-bottom: 10px;
+    margin-top: 0 !important;
+}
+.pd-footer .top-section form p, .pd-footer .top-section form label{
+width: 100%;
+margin-top: 0;
+margin-bottom: 0;
+}
+}
+.pd-footer .suscribe form, .pd-home-header .suscribe form{
+flex-wrap: wrap;
+}
+.pd-footer .subscribe form input, .pd-home-header .subscribe form input{
+width: 100% !important;
+}
+
+.pd-home-header .suscribe form p:first-child, .pd-footer .suscribe form > p:nth-child(1){
+    width: 74% !important;
+    margin-right: 1rem !important;
+    flex-grow: 2;
+}
+
+.pd-home-header .suscribe form p:nth-child(2), .pd-footer .suscribe form > p:nth-child(2){
+   width: 20% !important;
+}
+
+.pd-home-header .wpcf7 form.sent .wpcf7-response-output, .pd-footer .wpcf7 form.sent .wpcf7-response-output {
+    margin: 0 !important;
+    width: 100% !important;
+}
+
+@media (max-width: 760px){
+.pd-home-header .subscribe form > p , .pd-footer .subscribe form > p {
+    margin-bottom: 0 !important;
+    width: 100% !important;
+}
+.pd-footer .suscribe form > p:nth-child(2), .pd-home-header .suscribe form > p:nth-child(2){
+   margin: 0 !important;
+}
+.pd-footer .suscribe form p label, .pd-home-header .suscribe form p label{
+    width: 100% !important; 
+}
+.pd-footer .wpcf7 form.sent .wpcf7-response-output, .pd-home-header .wpcf7 form.sent .wpcf7-response-output {
+    margin: 1rem 0 !important;
+}
+}

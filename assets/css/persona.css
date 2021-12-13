@@ -1,0 +1,295 @@
+
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.pd-persona .imagePart {
+  width: 65%;
+  height: 60vh;
+  margin: auto;
+  margin-top: 30px;
+  border-radius: 5px;
+  background-image: url("../images/new-img2.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 50px;
+}
+@media (max-width: 768px) {
+  .pd-persona .imagePart {
+    height: 50vh;
+    width: 100%;
+    margin-top: 0;
+  }
+}
+.pd-persona .textPart {
+  width: 65%;
+  margin: auto;
+}
+@media (max-width: 768px) {
+  .pd-persona .textPart {
+    width: 90%;
+  }
+}
+.pd-persona .textPart .topic {
+  font-size: 58px;
+  font-weight: 400;
+  line-height: 80px;
+  margin-bottom: 20px;
+  font-family: "Tiempos Headline";
+  color: #2C2C2C;
+}
+@media (max-width: 768px) {
+  .pd-persona .textPart .topic {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+.pd-persona .textPart .explain {
+  font-size: 16px;
+  line-height: 24px;
+  color: #505050;
+  font-family: "Aktiv Grotesk", "Segoe UI", "Roboto", sans-serif;
+  letter-spacing: 0.5px;
+}
+.pd-persona .textPart .explain .sec-p {
+  margin-top: 1rem;
+}
+@media (max-width: 768px) {
+  .pd-persona .textPart .explain {
+    font-size: 14px;
+  }
+}
+.pd-persona .textPart .actions {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.pd-persona .textPart .actions p {
+  font-size: 10px;
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  font-weight: bold;
+  color: #505050;
+  list-style: 24px;
+  margin-right: 10px;
+  font-family: "Aktiv Grotesk", "Segoe UI", "Roboto", sans-serif;
+}
+.pd-persona .textPart .actions .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.pd-persona .textPart .actions .icons a {
+  text-decoration: none;
+  display: block;
+  margin-right: 15px;
+}
+.pd-persona .textPart .actions .icons a img {
+  width: 20px;
+}
+.pd-persona form {
+  width: 65%;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+@media (max-width: 768px) {
+  .pd-persona form {
+    width: 90%;
+  }
+}
+.pd-persona form .head {
+  font-size: 32px;
+  letter-spacing: 0.5px;
+  font-family: "Tiempos Headline";
+  color: #2C2C2C;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+.pd-persona form .group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 20px;
+}
+.pd-persona form .group:last-child {
+  margin-bottom: 0px;
+}
+.pd-persona form .group label {
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-family: "Aktiv Grotesk", "Segoe UI", "Roboto", sans-serif;
+}
+@media (max-width: 768px) {
+  .pd-persona form .group label {
+    font-size: 14px;
+  }
+}
+.pd-persona form .group select {
+  background: rgba(229, 229, 229, 0.2);
+  border: 1px solid #E5E5E5;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 52%;
+  padding: 10px;
+  outline: none;
+  font-family: "Aktiv Grotesk", "Segoe UI", "Roboto", sans-serif;
+  font-size: 12px;
+  color: #2C2C2C;
+}
+@media (max-width: 768px) {
+  .pd-persona form .group select {
+    width: 100%;
+  }
+}
+.pd-persona form .group select:active {
+  outline: none;
+}
+.pd-persona form .group input {
+  background: rgba(229, 229, 229, 0.2);
+  border: 1px solid #E5E5E5;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Aktiv Grotesk", "Segoe UI", "Roboto", sans-serif;
+  width: 52%;
+  padding: 10px;
+  outline: none;
+  font-size: 12px;
+  color: #2C2C2C;
+}
+@media (max-width: 768px) {
+  .pd-persona form .group input {
+    width: 100%;
+  }
+}
+.pd-persona form .group input::-webkit-input-placeholder {
+  font-family: "Aktiv Grotesk", "Segoe UI", "Roboto", sans-serif;
+  font-size: 12px;
+  color: #2C2C2C;
+}
+.pd-persona form .group input::-moz-placeholder {
+  font-family: "Aktiv Grotesk", "Segoe UI", "Roboto", sans-serif;
+  font-size: 12px;
+  color: #2C2C2C;
+}
+.pd-persona form .group input:-ms-input-placeholder {
+  font-family: "Aktiv Grotesk", "Segoe UI", "Roboto", sans-serif;
+  font-size: 12px;
+  color: #2C2C2C;
+}
+.pd-persona form .group input::-ms-input-placeholder {
+  font-family: "Aktiv Grotesk", "Segoe UI", "Roboto", sans-serif;
+  font-size: 12px;
+  color: #2C2C2C;
+}
+.pd-persona form .group input::placeholder {
+  font-family: "Aktiv Grotesk", "Segoe UI", "Roboto", sans-serif;
+  font-size: 12px;
+  color: #2C2C2C;
+}
+.pd-persona form .group input:active {
+  outline: none;
+}
+.pd-persona form button {
+  margin-top: 15px;
+  width: 250px;
+  padding: 10px 0px;
+  font-family: "Aktiv Grotesk", "Segoe UI", "Roboto", sans-serif;
+  border: none;
+  background-color: #E26D48;
+  cursor: pointer;
+  border-radius: 2px;
+  color: white;
+  outline: none;
+  border: transparent;
+}
+@media (max-width: 768px) {
+  .pd-persona form button {
+    width: 100%;
+  }
+}
+.pd-persona form button:disabled {
+  background: #C4C4C4;
+}
+.pd-persona form button:hover {
+  background-color: #E26D48;
+  outline: none;
+}
+.pd-persona form button:focus {
+  background-color: #E26D48;
+  outline: none;
+}
+.pd-persona .result {
+  width: 65%;
+  margin: auto;
+  margin-bottom: 30px;
+}
+@media (max-width: 768px) {
+  .pd-persona .result {
+    width: 90%;
+  }
+}
+.pd-persona .result p {
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+  font-size: 27px;
+  color: #2C2C2C;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+.pd-persona .result ul {
+  /* background: rgba(172, 231, 224, 0.2); */
+  border-radius: 8px;
+  padding: 20px 20px;
+  padding-left: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  list-style: none;
+}
+.pd-persona .result ul li {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 16px;
+  font-weight: 400;
+  font-family: "Aktiv Grotesk", "Segoe UI", "Roboto", sans-serif;
+}
+.pd-persona .p-text,
+.buttony {
+ 
+  font-family: "Aktiv Grotesk", "Segoe UI", "Roboto", sans-serif;
+}
+@media (max-width: 768px) {
+  .pd-persona .result ul li {
+    font-size: 11px;
+  }
+}
+.pd-persona .result ul li:last-child {
+  margin-bottom: 0;
+}
+.pd-persona .result ul li::before {
+  content: "•";
+  color: #ACE7E0;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+.pd-persona .totalDiv {
+  display: none;
+}

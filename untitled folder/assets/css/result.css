@@ -1,0 +1,638 @@
+/* FONT IMPORTS */
+@font-face {
+  font-family: "Aktiv Grotesk";
+  src: url("../fonts/AktivGroteskCorp-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aktiv Grotesk";
+  src: url("../fonts/AktivGroteskCorp-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aktiv Grotesk";
+  src: url("../fonts/AktivGroteskCorp-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Tiempos Headline";
+  src: url("../fonts/TiemposText-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Tiempos Headline";
+  src: url("../fonts/TiemposText-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Tiempos Headline";
+  src: url("../fonts/TiemposText-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  scroll-padding-top: 20px;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Aktiv Grotesk", "Segoe UI", "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Anteb", sans-serif;
+}
+
+::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  font-family: "Open Sans", sans-serif;
+}
+
+::-moz-placeholder, textarea::-moz-placeholder {
+  font-family: "Open Sans", sans-serif;
+}
+
+:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  font-family: "Open Sans", sans-serif;
+}
+
+::-ms-input-placeholder, textarea::-ms-input-placeholder {
+  font-family: "Open Sans", sans-serif;
+}
+
+input,
+textarea,
+p,
+::placeholder,
+textarea::placeholder {
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+textarea {
+  resize: vertical;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  background: white;
+  color: #505050;
+}
+
+.pd-result {
+  width: 90%;
+  max-width: 1140px;
+  margin: 2rem auto;
+}
+.pd-result h1 {
+  text-align: center;
+  max-width: 1000px;
+  font-family: "Tiempos Headline";
+  margin: 1rem auto;
+}
+.pd-result .expressResult {
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  color: #505050;
+}
+.pd-result .expressResult span {
+  color: #f47f5a;
+}
+@media only screen and (max-width: 500px) {
+  .pd-result .expressResult {
+    font-size: 14px;
+    text-align: left;
+  }
+}
+.pd-result .wrapper {
+  position: relative;
+  padding: 200px 0;
+  margin-bottom: 100px;
+}
+.pd-result .wrapper h1,
+.pd-result .wrapper h2 {
+  font-family: "Aktiv Grotesk", "Segoe UI", "Roboto", sans-serif;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+.pd-result .wrapper h1 {
+  font-size: 45px;
+  color: rgba(44, 44, 44, 0.2);
+  font-weight: 700;
+}
+.pd-result .wrapper h2 {
+  font-size: 1.1rem;
+  opacity: 0.7;
+}
+@media only screen and (max-width: 500px) {
+  .pd-result .wrapper {
+    margin-bottom: 0;
+    padding: 100px 0;
+  }
+}
+.pd-result .wrapper .left {
+  position: absolute;
+  left: -25%;
+  top: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+.pd-result .wrapper .left .t-3 {
+  -webkit-transform: rotate(90deg) translateY(60px);
+          transform: rotate(90deg) translateY(60px);
+}
+.pd-result .wrapper .left .t3-arrow {
+  -webkit-transform: rotate(270deg) translateY(-40px);
+          transform: rotate(270deg) translateY(-40px);
+}
+.pd-result .wrapper .left .t4-arrow {
+  -webkit-transform: rotate(90deg) translateY(-40px);
+          transform: rotate(90deg) translateY(-40px);
+}
+.pd-result .wrapper .left .t-4 {
+  -webkit-transform: rotate(90deg) translateY(-60px);
+          transform: rotate(90deg) translateY(-60px);
+}
+@media only screen and (max-width: 500px) {
+  .pd-result .wrapper .left {
+    display: none;
+  }
+}
+.pd-result .wrapper .bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: absolute;
+  bottom: -10%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+.pd-result .wrapper .bottom img {
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+  margin: 0 3rem;
+}
+.pd-result .wrapper .bottom .rotate {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+@media only screen and (max-width: 500px) {
+  .pd-result .wrapper .bottom {
+    display: none;
+  }
+}
+.pd-result .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 400px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  margin: auto;
+  position: relative;
+  color: white;
+  max-width: 95vw;
+}
+@media only screen and (max-width: 500px) {
+  .pd-result .container {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+}
+.pd-result .container * {
+  font-family: "Tiempos Headline";
+}
+.pd-result .container .box {
+  width: 50%;
+  height: 200px;
+  position: relative;
+  color: white;
+}
+.pd-result .container .box .inner {
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+.pd-result .container .box p {
+  font-size: 1rem;
+}
+.pd-result .container img {
+  width: 31px;
+  height: 28px;
+  margin: 1rem 0;
+}
+.pd-result .container .collector {
+  background: #4a202a;
+  border-radius: 10px 0 0 0;
+}
+.pd-result .container .collector .inner {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.pd-result .container .collector .inner .percent {
+  -webkit-transform: translate(-230%, 350%);
+          transform: translate(-230%, 350%);
+}
+.pd-result .container .splurger {
+  background: #29050d;
+  border-radius: 0 10px 0 0;
+}
+.pd-result .container .splurger .inner {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.pd-result .container .dodger {
+  background: #7f686d;
+  border-radius: 0 0 10px 0;
+  text-align: right;
+}
+.pd-result .container .scrooge {
+  background: #784853;
+  border-radius: 0 0 0 10px;
+}
+.pd-result .container .scrooge .inner {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.pd-result .container .percent {
+  margin-top: 0.7rem;
+  -webkit-transform: translate(250%, 340%);
+          transform: translate(250%, 340%);
+  -webkit-animation: percentAnim 1s 2s ease forwards;
+          animation: percentAnim 1s 2s ease forwards;
+}
+@-webkit-keyframes percentAnim {
+  to {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+@keyframes percentAnim {
+  to {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+.pd-result .container .divbox {
+  position: absolute;
+  left: 0;
+  background: inherit;
+  z-index: -1;
+  -webkit-transition: width 0.9s, height 0.9s;
+  transition: width 0.9s, height 0.9s;
+}
+.pd-result .container .divbox::after {
+  content: "";
+  position: absolute;
+  display: none;
+  bottom: 99%;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: inherit;
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+          clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+.pd-result .container .divbox.height {
+  width: 100%;
+  top: unset;
+}
+.pd-result .container .divbox.width {
+  top: 0;
+  height: 100%;
+}
+.pd-result .container .divbox.width::after {
+  top: 0;
+  left: 99%;
+  width: 60px;
+  height: 100%;
+  -webkit-clip-path: polygon(0 0, 0% 100%, 100% 50%);
+          clip-path: polygon(0 0, 0% 100%, 100% 50%);
+}
+.pd-result .container .divbox.box1 {
+  bottom: calc(100% - 17px);
+  height: 0;
+}
+.pd-result .container .divbox.box2 {
+  left: calc(100% - 17px);
+  width: 0;
+}
+.pd-result .container .divbox.box3 {
+  right: calc(100% - 17px);
+  left: unset;
+  width: 0;
+  -webkit-transform: rotateZ(180deg);
+          transform: rotateZ(180deg);
+}
+.pd-result .container .divbox.box4 {
+  -webkit-transform: rotateZ(180deg);
+          transform: rotateZ(180deg);
+  top: calc(100% - 17px);
+  height: 0;
+}
+.pd-result .container .showArr::after {
+  display: block;
+}
+.pd-result .container .abbot {
+  position: absolute;
+  color: black;
+  top: 50%;
+  left: 50%;
+  background: #b3a3a7;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  -webkit-transition: -webkit-box-shadow 0.9s;
+  transition: -webkit-box-shadow 0.9s;
+  transition: box-shadow 0.9s;
+  transition: box-shadow 0.9s, -webkit-box-shadow 0.9s;
+  border-radius: 50%;
+}
+.pd-result .container .abbot .inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+.pd-result .container .abbot .percent {
+  -webkit-transform: translate(0, 550%);
+          transform: translate(0, 550%);
+}
+.pd-result .results-meaning {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  margin: 2rem auto;
+}
+.pd-result .results-meaning .coverDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 50px;
+}
+.pd-result .results-meaning .coverDiv img {
+  width: 50px;
+  margin-bottom: 20px;
+}
+@media only screen and (max-width: 900px) {
+  .pd-result .results-meaning .coverDiv img {
+    width: 30px;
+  }
+}
+.pd-result .results-meaning h2 {
+  padding: 0rem 0 0rem 0;
+  font-family: "Tiempos Headline";
+  color: #2c2c2c;
+  font-size: 32px;
+  font-weight: 600;
+}
+@media only screen and (max-width: 900px) {
+  .pd-result .results-meaning h2 {
+    font-size: 24px;
+  }
+}
+.pd-result .results-meaning p {
+  margin: 1rem 0;
+  line-height: 24px;
+  font-family: "Aktiv Grotesk", "Segoe UI", "Roboto", sans-serif;
+  color: #505050;
+  font-size: 16px;
+}
+@media only screen and (max-width: 900px) {
+  .pd-result .results-meaning p {
+    font-size: 13px;
+  }
+}
+.pd-result .results-meaning .right {
+  margin-right: 2rem;
+  width: 85%;
+}
+@media only screen and (max-width: 900px) {
+  .pd-result .results-meaning .right {
+    width: 100%;
+    margin: 1rem 0;
+  }
+}
+.pd-result .results-meaning .left {
+  position: sticky;
+  top: 0;
+  text-align: end;
+  list-style: none;
+}
+@media only screen and (max-width: 900px) {
+  .pd-result .results-meaning .left {
+    display: none;
+  }
+}
+.pd-result .results-meaning .left li {
+  margin: 1.3rem 0;
+  font-weight: bold;
+  font-family: "Aktiv Grotesk", "Segoe UI", "Roboto", sans-serif;
+}
+.pd-result .results-meaning .left li a {
+  color: black;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: "Aktiv Grotesk", "Segoe UI", "Roboto", sans-serif;
+}
+.pd-result .results-meaning .left li a.active {
+  color: #c4c4c4;
+}
+.pd-result .articles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 5rem 0;
+}
+@media only screen and (max-width: 900px) {
+  .pd-result .articles {
+    margin: 3rem 0;
+  }
+}
+.pd-result .articles article {
+  width: 48%;
+  border-radius: 10px;
+  height: 400px;
+}
+@media only screen and (max-width: 500px) {
+  .pd-result .articles article {
+    width: 100%;
+    margin: 1rem 0;
+    height: 370px;
+  }
+}
+.pd-result .articles article a {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: relative;
+  border-radius: 10px;
+}
+.pd-result .articles article a.link-1 {
+  background: url("../images/blog-1.png") no-repeat center center;
+  -webkit-transition: background-size 0.5s ease;
+  transition: background-size 0.5s ease;
+  background-size: 100% 100%;
+}
+.pd-result .articles article a.link-1:hover {
+  background-size: 120% 120%;
+}
+.pd-result .articles article a.link-2 {
+  background: url("../images/blog-2.png") no-repeat center center;
+  -webkit-transition: background-size 0.5s ease;
+  transition: background-size 0.5s ease;
+  background-size: 100% 100%;
+}
+.pd-result .articles article a.link-2:hover {
+  background-size: 120% 120%;
+}
+.pd-result .articles article a p {
+  z-index: 3;
+  color: white;
+  max-width: 80%;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}
+.pd-result .articles article a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  border-radius: 10px;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+}

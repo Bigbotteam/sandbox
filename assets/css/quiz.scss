@@ -1,0 +1,561 @@
+@import "./resets";
+
+.pd-quiz {
+  font-family: "Aktiv Grotesk", "Segoe UI", "Roboto", sans-serif;
+
+  h1 {
+    font-family: "Tiempos Headline";
+  }
+
+  .btn {
+    background-color: #e26d48;
+    padding: 0.5rem 1rem;
+    border-radius: 2px;
+    color: white;
+    font-size: 0.9rem;
+    text-decoration: none;
+    border: none;
+    margin: 1rem auto;
+  }
+
+  button.btn {
+    display: block;
+  }
+
+  header {
+    width: 100%;
+    padding: 2rem 1rem;
+    text-align: center;
+    overflow: hidden;
+    background-color: white;
+
+    h1 {
+      text-align: center;
+      max-width: 1000px;
+      margin: 1rem auto;
+      font-size: 50px;
+      margin-bottom: 3rem;
+      line-height: 4rem;
+
+      @include mq(768px) {
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+
+    video {
+      width: 100%;
+      height: 400px;
+      //min-width: 1000px;
+      margin: 2rem 0;
+
+      @include mq(768px) {
+        display: none;
+      }
+    }
+
+    h1 {
+      animation: animText 2s ease forwards;
+    }
+
+    @keyframes animText {
+      from {
+        opacity: 0;
+        transform: translateY(100px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .btn.btnTest {
+      cursor: not-allowed;
+      background: #c4c4c4;
+      transform: translateY(80px);
+      animation: bgChange 1.6s ease 2s forwards;
+    }
+
+    @keyframes bgChange {
+      from {
+        cursor: not-allowed;
+        background: #c4c4c4;
+      }
+
+      to {
+        transform: translateY(0);
+        background-color: #e26d48;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .test-container {
+    width: 100%;
+
+    .mainTest {
+      // background-color: #f4f5f5;
+      padding-bottom: 110px;
+      margin-bottom: 50px;
+      background: linear-gradient(180deg,
+          rgba(36, 59, 65, 0.05) 98%,
+          rgba(36, 59, 65, 0) 100.46%);
+      padding: 2rem 1rem;
+    }
+
+    .navContainer {
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 50;
+
+      padding: 1rem 0.6rem;
+      background: #f4f5f5;
+      opacity: 1;
+
+      .text {
+        width: 100%;
+        @include flex(row, space-between, center);
+        margin: 1rem auto;
+        padding: 0 0 1rem 0;
+        text-transform: uppercase;
+
+        p {
+          width: 48%;
+          font-family: "Aktiv Grotesk", "Segoe UI", "Roboto", sans-serif;
+
+          &:nth-child(2) {
+            color: #1f3338;
+            margin-left: 13%;
+          }
+
+          &:first-child {
+            color: #e26d48;
+          }
+        }
+      }
+    }
+
+    .progressbar {
+      height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      position: relative;
+      left: -21px;
+
+      .progress {
+        width: 48%;
+        position: relative;
+
+        @include flex(row, flex-start, center);
+
+        .pr-child {
+          border-radius: 10px;
+          width: 25%;
+          background: #c4c4c4;
+          height: 2px;
+          position: relative;
+          margin-left: 20px;
+
+          &.progress6 {
+            .quadrant {
+              background: #e26d48;
+            }
+          }
+
+          &.progress10 {
+            span.hidden {
+              display: none;
+            }
+          }
+        }
+
+        span {
+          width: 20px;
+          height: 20px;
+          font-size: 13px;
+          @include flex(row, center, center);
+          border: 1px solid #c4c4c4;
+          border-radius: 50%;
+          position: absolute;
+          top: -10px;
+          left: 100%;
+          background: white;
+          border-color: #c4c4c4;
+          // transform: translateY(50%);
+
+          &.active {
+            background: white;
+          }
+        }
+
+        &:first-child {
+          .quadrant {
+            background: #e26d48;
+          }
+        }
+
+        &:nth-child(2) {
+          .quadrant {
+            background: #1f3338;
+          }
+        }
+
+        &.hypothesis {
+          span.active {
+            border-color: #1f3338 !important;
+          }
+        }
+
+        &.behavior {
+          .pr-child:first-child {
+            width: max-content;
+          }
+
+          span.active {
+            border-color: #e26d48;
+          }
+        }
+
+        .quadrant {
+          width: 0%;
+          height: 100%;
+          border-radius: inherit;
+          transition: width 0.6s ease;
+        }
+      }
+    }
+
+    form {
+      width: 100%;
+      max-width: 1000px;
+      margin: auto;
+
+      .btn {
+        width: 90vw;
+        max-width: 500px;
+        margin-top: 2rem;
+      }
+
+      .btn:disabled {
+        background-color: #e26c4883;
+        cursor: not-allowed;
+      }
+
+      padding: 0 10px;
+
+      .question-wrap {
+        opacity: 0.6;
+        pointer-events: none;
+
+        &.active {
+          opacity: 1;
+          pointer-events: all;
+        }
+      }
+
+      h2 {
+        font-size: 2rem;
+        font-size: 36px;
+        font-family: "Tiempos Headline";
+        color: #1f3338;
+
+        @include media-md {
+          font-size: 1.4rem;
+        }
+      }
+
+      .question-wrap {
+        margin: 2rem 0;
+      }
+
+      .options {
+        display: flex;
+        justify-content: flex-start;
+        align-items: stretch;
+        flex-wrap: wrap;
+
+        label {
+          padding: 1rem;
+          padding-bottom: 2rem;
+          border: 2px solid white;
+          width: 30%;
+          font-size: 15px;
+          margin: 1rem 1rem 0 0;
+          font-family: "Aktiv Grotesk", "Segoe UI", "Roboto", sans-serif;
+          cursor: pointer;
+          line-height: 24px;
+
+          @include media-md {
+            width: 45%;
+          }
+
+          @include media-sm {
+            width: 100%;
+          }
+
+          a {
+            color: inherit;
+          }
+        }
+
+        input[type="radio"]:checked+label {
+          border-color: #e26d48;
+          
+        }
+
+        input.grey[type="radio"]:checked+label {
+          border: 2px solid #1f3338;
+        }
+      }
+    }
+
+    .btn.btnMain {
+      width: 90vw;
+      max-width: 500px;
+      margin-bottom: 100px;
+    }
+
+    .btn.btnMain:disabled {
+      background-color: #e26c4883;
+      cursor: not-allowed;
+    }
+
+    form.modal {
+      width: 90vw;
+      max-width: 750px;
+
+      background-color: white;
+      padding: 30px 20px;
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      z-index: 100;
+      transform: translate(-50%, -50%) scale(0);
+      border-radius: 5px;
+      transition: transform 0.5s ease;
+      @include flex(column, center, center);
+
+      h1 {
+        margin: 1rem 0;
+        font-size: 1.5rem;
+        margin-top: 50px;
+
+        @include mq(768px) {
+          font-size: 1rem;
+        }
+      }
+
+      &.showFormModal {
+        transform: translate(-50%, -50%) scale(1);
+      }
+
+      .playstore {
+        margin-top: 2.5rem;
+        @include flex(column, flex-end, center);
+
+        p {
+          font-size: 0.9rem;
+          text-align: center;
+        }
+
+        .appStore {
+          @include flex(row, center, center);
+
+          a {
+            margin: 1rem 0.5rem;
+          }
+        }
+      }
+
+      .form-group {
+        max-width: 380px;
+        width: 100%;
+        width: 70%;
+        margin: auto;
+
+        @include mq(768px) {
+          width: 100%;
+        }
+
+        label {
+          color: #2c2c2c;
+          font-family: "Aktiv Grotesk", "Segoe UI", "Roboto", sans-serif;
+          font-size: 14px;
+        }
+
+        p.error {
+          color: red;
+          margin-bottom: 10px;
+          font-size: 10px;
+          display: none;
+
+          &.active {
+            display: block;
+          }
+        }
+      }
+
+      input,
+      .btn {
+        width: 100%;
+        height: 40px;
+        margin: 0.7rem 0;
+        border-radius: 2px;
+        outline: none;
+      }
+
+      .btn {
+        width: 70%;
+        margin: 0.7rem auto;
+        max-width: 380px;
+
+        @include mq(768px) {
+          width: 100%;
+        }
+
+        &:disabled {
+          background: #c4c4c4;
+        }
+      }
+
+      input {
+        border: 1px solid #e5e5e5;
+        background: rgba(229, 229, 229, 0.2);
+        padding: 0 1rem;
+        margin-top: 0.1rem;
+        margin-bottom: 5px;
+      }
+
+      .close {
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        background: transparent;
+        border: none;
+        border-radius: 3px;
+        font-size: 1.1rem;
+        width: 24px;
+        height: 24px;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+
+        @include mq(768px) {
+          top: 1rem;
+          right: 0.5rem;
+        }
+      }
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: none;
+      z-index: 60;
+      background: #000;
+      opacity: 0.5;
+      width: 100vw;
+      height: 100vh;
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .pd-quiz {
+    header {
+      h1 {
+        font-size: 62px;
+        line-height: 74px;
+        text-align: center;
+        letter-spacing: 1px;
+      }
+
+      .btn.btnTest {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
+    .test-container {
+      .mainTest {
+        padding-bottom: 50px;
+        margin-bottom: 100px;
+      }
+
+      .navContainer {
+        max-width: 1000px;
+        margin: 0 auto;
+
+        .text {
+          p {
+            font-size: 12px;
+            line-height: 150%;
+            letter-spacing: 0.5px;
+          }
+        }
+      }
+
+      form {
+        h2 {
+          font-size: 36px;
+          line-height: 43px;
+        }
+
+        .options {
+          label {
+            font-size: 16px;
+            line-height: 24px;
+          }
+        }
+
+        .btn {
+          font-weight: bold;
+          font-size: 16px;
+          line-height: 24px;
+        }
+
+        &.modal {
+          h1 {
+            font-size: 32px;
+            line-height: 48px;
+          }
+
+          input {
+            &::placeholder {
+              font-size: 12px;
+              line-height: 16px;
+              color: #c4c4c4;
+            }
+
+            font-size: 12px;
+            line-height: 16px;
+            color: #2c2c2c;
+          }
+
+          .form-group,
+          .btn {
+            max-width: 500px;
+          }
+
+          .form-group label {
+            font-size: 16px;
+            line-height: 20px;
+          }
+
+          .playstore p {
+            font-size: 14px;
+            line-height: 28px;
+          }
+        }
+      }
+    }
+  }
+}

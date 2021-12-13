@@ -1,0 +1,412 @@
+@import "./resets";
+a {
+  text-decoration: none;
+  color: inherit;
+}
+body {
+  background: white;
+  color: #505050;
+}
+.pd-result {
+  width: 90%;
+  max-width: 1140px;
+  margin: 2rem auto;
+
+  h1 {
+    text-align: center;
+    max-width: 1000px;
+    font-family: "Tiempos Headline";
+    margin: 1rem auto;
+  }
+  .expressResult {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: #505050;
+    span {
+      color: #f47f5a;
+    }
+    @include media-sm {
+      font-size: 14px;
+      text-align: left;
+    }
+  }
+  .wrapper {
+    position: relative;
+    padding: 200px 0;
+    margin-bottom: 100px;
+    h1,
+    h2 {
+      font-family: "Aktiv Grotesk", "Segoe UI", "Roboto", sans-serif;
+      width: max-content;
+    }
+    h1 {
+      font-size: 45px;
+      color: rgba(44, 44, 44, 0.2);
+      font-weight: 700;
+    }
+    h2 {
+      font-size: 1.1rem;
+      opacity: 0.7;
+    }
+    @include media-sm {
+      margin-bottom: 0;
+      padding: 100px 0;
+    }
+    .left {
+      position: absolute;
+      left: -25%;
+      top: 50%;
+      @include flex(row, flex-start, center);
+      transform: rotate(270deg);
+
+      .t-3 {
+        transform: rotate(90deg) translateY(60px);
+      }
+      .t3-arrow {
+        transform: rotate(270deg) translateY(-40px);
+      }
+      .t4-arrow {
+        transform: rotate(90deg) translateY(-40px);
+      }
+      .t-4 {
+        transform: rotate(90deg) translateY(-60px);
+      }
+      @include media-sm {
+        display: none;
+      }
+    }
+    .bottom {
+      @include flex(row, flex-start, center);
+      position: absolute;
+      bottom: -10%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: max-content;
+      img {
+        transform: rotate(270deg);
+        margin: 0 3rem;
+      }
+      .rotate {
+        transform: rotate(90deg);
+      }
+
+      @include media-sm {
+        display: none;
+      }
+    }
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 400px;
+    height: max-content;
+    margin: auto;
+    position: relative;
+    color: white;
+
+    @include media-sm {
+      transform: scale(0.7);
+    }
+    max-width: 95vw;
+    * {
+      font-family: "Tiempos Headline";
+    }
+    .box {
+      width: 50%;
+      height: 200px;
+      position: relative;
+      color: white;
+
+      .inner {
+        padding: 1rem;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        flex-direction: column;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+    img {
+      width: 31px;
+      height: 28px;
+      margin: 1rem 0;
+    }
+    .collector {
+      background: #4a202a;
+      border-radius: 10px 0 0 0;
+      .inner {
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        .percent {
+          transform: translate(-230%, 350%);
+        }
+      }
+    }
+    .splurger {
+      background: #29050d;
+      border-radius: 0 10px 0 0;
+      .inner {
+        justify-content: flex-start;
+      }
+    }
+    .dodger {
+      background: #7f686d;
+      border-radius: 0 0 10px 0;
+      text-align: right;
+    }
+    .scrooge {
+      background: #784853;
+      border-radius: 0 0 0 10px;
+      .inner {
+        align-items: flex-start;
+      }
+    }
+    .percent {
+      margin-top: 0.7rem;
+      transform: translate(250%, 340%);
+      animation: percentAnim 1s 2s ease forwards;
+    }
+    @keyframes percentAnim {
+      to {
+        transform: translate(0);
+      }
+    }
+    .divbox {
+      position: absolute;
+      left: 0;
+      background: inherit;
+      z-index: -1;
+      transition: width 0.9s, height 0.9s;
+
+      &::after {
+        content: "";
+        position: absolute;
+        display: none;
+        bottom: 99%;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        background: inherit;
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      }
+      &.height {
+        width: 100%;
+        top: unset;
+      }
+      &.width {
+        top: 0;
+        height: 100%;
+
+        &::after {
+          top: 0;
+          left: 99%;
+          width: 60px;
+          height: 100%;
+          clip-path: polygon(0 0, 0% 100%, 100% 50%);
+        }
+      }
+
+      &.box1 {
+        bottom: calc(100% - 17px);
+        height: 0;
+      }
+      &.box2 {
+        left: calc(100% - 17px);
+        width: 0;
+      }
+      &.box3 {
+        right: calc(100% - 17px);
+        left: unset;
+        width: 0;
+        transform: rotateZ(180deg);
+      }
+      &.box4 {
+        transform: rotateZ(180deg);
+        top: calc(100% - 17px);
+        height: 0;
+      }
+    }
+    .showArr::after {
+      display: block;
+    }
+    .abbot {
+      position: absolute;
+      color: black;
+      top: 50%;
+      left: 50%;
+      background: #b3a3a7;
+      transform: translate(-50%, -50%);
+      width: 150px;
+      height: 150px;
+      transition: box-shadow 0.9s;
+      border-radius: 50%;
+
+      .inner {
+        display: flex;
+        overflow: hidden;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+      }
+
+      .percent {
+        transform: translate(0, 550%);
+      }
+    }
+  }
+
+  .results-meaning {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin: 2rem auto;
+    .coverDiv {
+      display: flex;
+      flex-direction: column;
+      margin-top: 50px;
+      img {
+        width: 50px;
+        margin-bottom: 20px;
+        @include media-md {
+          width: 30px;
+        }
+      }
+    }
+    h2 {
+      padding: 0rem 0 0rem 0;
+      font-family: "Tiempos Headline";
+      color: #2c2c2c;
+      font-size: 32px;
+      font-weight: 600;
+      @include media-md {
+        font-size: 24px;
+      }
+    }
+    p {
+      margin: 1rem 0;
+      line-height: 24px;
+      font-family: "Aktiv Grotesk", "Segoe UI", "Roboto", sans-serif;
+      color: #505050;
+      font-size: 16px;
+      @include media-md {
+        font-size: 13px;
+      }
+    }
+    .right {
+      margin-right: 2rem;
+      width: 85%;
+      @include media-md {
+        width: 100%;
+        margin: 1rem 0;
+      }
+    }
+    .left {
+      //   width: 20%;
+      //   margin-left: 3rem;
+      position: sticky;
+      top: 0;
+      text-align: end;
+      list-style: none;
+
+      @include media-md {
+        display: none;
+      }
+      li {
+        margin: 1.3rem 0;
+
+        font-weight: bold;
+        font-family: "Aktiv Grotesk", "Segoe UI", "Roboto", sans-serif;
+        a {
+          color: black;
+          font-size: 12px;
+          font-weight: bold;
+          font-family: "Aktiv Grotesk", "Segoe UI", "Roboto", sans-serif;
+        }
+
+        a.active {
+          color: #c4c4c4;
+        }
+      }
+    }
+  }
+  .articles {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 5rem 0;
+    @include media-md {
+      margin: 3rem 0;
+    }
+    article {
+      width: 48%;
+      border-radius: 10px;
+      height: 400px;
+
+      @include media-sm {
+        width: 100%;
+        margin: 1rem 0;
+        height: 370px;
+      }
+      a {
+        width: 100%;
+        height: 100%;
+        padding: 1rem;
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        border-radius: 10px;
+
+        &.link-1 {
+          background: url("../images/blog-1.png") no-repeat center center;
+          transition: background-size 0.5s ease;
+          background-size: 100% 100%;
+          &:hover {
+            background-size: 120% 120%;
+          }
+        }
+        &.link-2 {
+          background: url("../images/blog-2.png") no-repeat center center;
+          transition: background-size 0.5s ease;
+          background-size: 100% 100%;
+          &:hover {
+            background-size: 120% 120%;
+          }
+        }
+        p {
+          z-index: 3;
+          color: white;
+          max-width: 80%;
+          font-size: 1.2rem;
+          line-height: 1.8rem;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          z-index: 1;
+          border-radius: 10px;
+          left: 0;
+          background-color: rgba(0, 0, 0, 0.5);
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}

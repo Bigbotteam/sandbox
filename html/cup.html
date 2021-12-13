@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/couple.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <title>Vested</title>
+</head> -->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Vested" />
+    <meta property="og:description" content="a day to remember" />
+    <meta property="og:url" content="https://vested.netlify.app/" />
+    <meta name="og:image"
+      content="https://res.cloudinary.com/pethsdigital/image/upload/v1622059322/Vested/logo_trnzws.svg" />
+    <meta name="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link rel="shortcut icon" href="../assets/images/logo.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="../assets/css/couple.css">
+    <title>Vested</title>
+
+    <style>
+      button:hover {
+cursor: pointer;
+}
+
+/* common styles end */
+
+/* modal part */
+#modal-background {
+display: none;
+background-color: rgba(0, 0, 0, 0.2);
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 1;
+overflow: hidden;
+}
+
+#modal {
+background-color: #fff;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+padding: 10px 20px;
+border-radius: 5px;
+display: flex;
+flex-direction: column;
+box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+font-size: 1.5rem;
+max-height: 80vh; 
+overflow-y: auto;
+animation-name: animatemodal;
+animation-duration: 0.4s;
+}
+.test{
+max-width: 460px;
+/* border: 3px solid red; */
+}
+
+.img-img{
+position: relative;
+} 
+
+.img-two{
+ max-width:100%; 
+ width:100%; 
+ /* mrgin-top: 2rem; */
+}
+
+.foot-text{
+position: absolute; 
+background-color: #2c2a2a; 
+bottom: -0.2rem; 
+width: 100%; 
+max-width:100%; 
+/* pading: .5rem; 0 .1rem 0; */
+}
+
+#close-btn {
+align-self: flex-end;
+}
+
+#close-btn:hover {
+cursor: pointer;
+color: #ff0000;
+}
+.buttony {
+display: flex;
+height: 40px;
+padding: 0;
+margin: 0 0 1rem 0;
+border: none;
+outline: none;
+border-radius: 2px;
+overflow: hidden;
+font-size: 14px;
+font-weight: 500;
+cursor: pointer;
+}
+
+
+.buttony {
+background: #E26D48;
+}
+
+.button__text,
+.button__icon {
+display: inline-flex;
+align-items: center;
+padding: 0 24px;
+color: #fff;
+height: 100%;
+}
+.button__text a{
+  text-decoration: none;
+  color: white;
+}
+
+.button__icon {
+font-size: 1.5em;
+}
+
+@media (max-width: 780px) {
+#modal{
+  width: 300px;
+}
+/* .p-text{} */
+}
+
+@media (max-width: 280px) {
+.foot-text{
+height:65px;
+}
+.p-text{
+font-size: 12px;
+}
+#modal{
+  width: 220px;
+}
+}
+
+@media (max-width: 280px) {
+  #modal{
+  width: 220px;
+}
+}
+@media (max-width: 350px) {
+  #modal{
+  width: 270px;
+}}
+  </style>
+  </head>
+<body>
+    <div class="pd-couple">
+        <div class="imagePart">
+
+        </div>
+        <div class="textPart">
+            <p class="topic">
+                Would you like your Money Style to complement your partner’s?
+            </p>
+            <p class="explain">
+                Opposites, as the saying goes, tend to attract. This has not been empirically shown to be true in the case of Money Styles, but if we take this as true, then it is particularly important to explore how couples on opposite ends of the Money Style chart can become successful money teams.  
+
+                </p>
+                <p class="explain" style="margin-top: 1rem;">
+ 
+                There are no hard and fast rules on how to successfully merge Money Styles. However, we can provide some general guidance (in 5 not-so-simple steps) based on our experience with couples across various life-stages and contexts, to help you UNCAP. 
+                
+            </p>
+
+            <div class="listact">
+                <div class="each">
+                    <div class="circle"></div>
+                    <p class="text">
+                      <span>Understand: </span>
+                      The first step is to seek to understand your natural attitudes towards money and those of your partner. Understanding the roots of your partners behaviours and attitudes will probably help you become less judgmental. Take the quiz with your part. It will help you understand how you both relate with money, why and what to do about it. 
+                    </p>
+                </div>
+
+                <div class="each">
+                    <div class="circle"></div>
+                    <p class="text">
+                       <span>Negotiate: </span>
+                       Discuss what changes you would like to see in your combined attitudes towards money and what that might mean for each partner. What sacrifices might be required from each partner, given their natural Money Style? Some give-and-take is required in this process.
+                    </p>
+                </div>
+
+                <div class="each">
+                    <div class="circle"></div>
+                    <p class="text">
+                      <span>Communicate: </span>The conversations about our money goals, attitudes and concerns are a crucial step. These conversations should start early in the relationship (once things get serious), should be honest and, should continue as the relationship evolves. If you are already having these conversations, well done! - you are well ahead of the game. If you are now inspired to have your first one, then by all means! - it’s not too late.
+                    </p>
+                </div>
+
+                <div class="each">
+                    <div class="circle"></div>
+                    <p class="text">
+                       <span>Accept: </span> Make peace with the fact that you or your partner will never quite achieve the perfect Money Styles that you would like for yourselves. Accept each other’s humanity and celebrate the fact that you will occasionally fall short of the ambition you set for yourselves and each other. You might break your 3-year-long Hoarder streak with an occasional jewelry splurge, but it is OK. 
+                    </p>
+                </div>
+
+                <div class="each">
+                    <div class="circle"></div>
+                    <p class="text">
+                   <span>Partner: </span>
+                   Maximize your diversity as a couple! Rather than seeking to change everything about yourself or your partner, bring out the best in each other by harnessing your natural Money Styles.
+                    </p>
+                </div>
+            </div>
+
+            <div class="actions">
+                <p>SHARE</p>
+                <div class="icons">
+                    <a href=""><img src="../assets/images/linkpersona.svg" alt="icon"></a>
+                    <a href=""><img src="../assets/images/facebookpersona.svg" alt="icon"></a>
+                    <a href=""><img src="../assets/images/instagrampersona.svg" alt="icon"></a>
+                    <a href=""><img src="../assets/images/twitterpersona.svg" alt="icon"></a>
+                </div>
+            </div>
+        </div>
+
+        <form action="">
+            <p class="head">Get your Money Style Action.</p>
+            <div class="group">
+                <label for="current">Select your current style:</label>
+				<select class="current" id="current" name="current"  required >
+
+						<option value="">Please Select</option>
+						<option value="collector">Collector</option>
+						<option value="splurger">Splurger</option>
+						<option value="scrooge">Scrooge</option>
+						<option value="dodger">Dodger</option>
+						<option value="abbot">Abbot</option>
+											
+			    </select>
+            </div>
+
+            <div class="group">
+                <label for="goal">Select your goal style:</label>
+				<select class="goal"  id="goal" name="goal"  required >
+
+                    <option value="">Please Select</option>
+                    <option value="collector">Collector</option>
+                    <option value="splurger">Splurger</option>
+                    <option value="scrooge">Scrooge</option>
+                    <option value="dodger">Dodger</option>
+                    <option value="abbot">Abbot</option>
+											
+			    </select>
+            </div>
+
+            <!-- <div class="group">
+                <label for="name">First and Last name</label>
+                <input type="text" required placeholder="Please enter your first and last name">
+            </div>
+
+            <div class="group">
+                <label for="name">Email address</label>
+                <input type="text" class="lastem" required placeholder="Please enter your email adress to receive your result">
+            </div> -->
+
+            <button id="myBtn" disabled class="submitt" type="submit">Get Money Style Actions</button>
+        </form>
+
+        <!-- <div class="result total totalDiv">
+            <p>Your result</p>
+            <ul class="loadUi">
+                
+            </ul>
+        </div> -->
+        <div id="modal-background" class="result total totalDiv" >
+          <div id="modal" >
+            <span id="close-btn">&times;</span>
+            <p>Your result</p>
+            <div class="test" >
+          <ul class="loadUi"></ul>
+
+          <button type="button" class="buttony">
+            <span class="button__text">
+                <a href="https://vested.ng/html/result.html">Return to your result page</a>
+            </span>
+            <span class="button__icon">
+              <img src="../assets/images/fullarrow.png" alt="">
+            </span>
+          </button>
+          
+          <div class="img-img"  style="position: relative;" >
+            <a class="" style="text-decoration: none;" href="https://vested.ng/html/persona.html">
+              <img class="img-two"  src="../assets//images/personal.svg" alt="">
+              <div class="foot-text" >
+              <p class="p-text" style="color: white; font-size: 14px; padding-left: .7rem; line-height: 1.2; margin-top: 1rem; margn-bottom: 2rem; " >
+               <b>  Would you like to change your Money Style?.</b>
+              </p>
+              </div>
+            </a>
+            </div>
+            </div>
+          </div>
+            </div>
+    </div>
+    
+    <script src="../assets/scripts/couple.js"></script>
+   
+</body>
+</html>

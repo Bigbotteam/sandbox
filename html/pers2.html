@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/persona.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <title>Vested</title>
+</head> -->
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Vested" />
+    <meta property="og:description" content="a day to remember" />
+    <meta property="og:url" content="https://vested.netlify.app/" />
+    <meta name="og:image"
+      content="https://res.cloudinary.com/pethsdigital/image/upload/v1622059322/Vested/logo_trnzws.svg" />
+    <meta name="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link rel="shortcut icon" href="../assets/images/logo.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="../assets/css/persona.css">
+    <title>Vested</title>
+
+    <style>
+        button:hover {
+  cursor: pointer;
+}
+
+/* common styles end */
+
+/* modal part */
+#modal-background {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+#modal {
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  font-size: 1.5rem;
+  max-height: 80vh; 
+  overflow-y: auto;
+  animation-name: animatemodal;
+  animation-duration: 0.4s;
+}
+.test{
+ max-width: 460px;
+ /* border: 3px solid red; */
+}
+
+.img-img{
+  position: relative;
+ } 
+
+ .img-two{
+   max-width:100%; 
+   width:100%; 
+   /* mrgin-top: 2rem; */
+ }
+
+ .foot-text{
+position: absolute; 
+background-color: #2c2a2a; 
+bottom: -0.2rem; 
+width: 100%; 
+max-width:100%; 
+/* pading: .5rem; 0 .1rem 0; */
+ }
+
+#close-btn {
+  align-self: flex-end;
+}
+
+#close-btn:hover {
+  cursor: pointer;
+  color: #ff0000;
+}
+.buttony {
+  display: flex;
+  height: 40px;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  overflow: hidden;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+
+.buttony {
+  background: #E26D48;
+}
+
+.button__text,
+.button__icon {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 24px;
+  color: #fff;
+  height: 100%;
+}
+.button__text a{
+    text-decoration: none;
+    color: white;
+}
+
+.button__icon {
+  font-size: 1.5em;
+}
+
+@media (max-width: 780px) {
+  #modal{
+    width: 300px;
+  }
+  /* .p-text{} */
+}
+
+@media (max-width: 280px) {
+.foot-text{
+  height:65px;
+}
+.p-text{
+  font-size: 12px;
+}
+#modal{
+    width: 220px;
+  }
+  }
+
+  @media (max-width: 280px) {
+    #modal{
+    width: 220px;
+  }
+  }
+  @media (max-width: 350px) {
+    #modal{
+    width: 270px;
+  }}
+    </style>
+  </head>
+<body class="" style="">
+    <div class="pd-persona">
+        <div class="imagePart">
+
+        </div>
+        <div class="textPart">
+            <p class="topic">
+                Would you like to change your Money Style?
+            </p>
+            <div class="explain">
+            <p class="">
+                There are no good or bad Money Styles. We are what we are and our bias when it comes to love, money, career, and other life choices are shaped by some combination of nature and nurture. Similarly, as with most things in life, some balance is healthy. Wherever you find yourself in the Money Style chart, you can pick up and learn behaviours from other Money Styles to complement your natural tendencies. For example, if you are an extreme Scrooge, getting yourself to live (and spend) a little, might be a good idea.  
+           </p>
+                <p class="sec-p" >
+                    However, you should bear in mind that the most diametrically opposed styles are on opposite diagonals of the Money Style chart. These styles are the hardest to transition between. For example, it is more difficult to transition from being an Avoider to being an Amasser, than it is to transition from being an Avoider to a Spender. This is because, for these transformations to occur, significant change is required on both dimensions (emotional and time orientation). 
+                
+            </p>
+            </div>
+
+            <div class="actions">
+                <p>SHARE</p>
+                <div class="icons">
+                    <a href=""><img src="../assets/images/linkpersona.svg" alt="icon"></a>
+                    <a href=""><img src="../assets/images/facebookpersona.svg" alt="icon"></a>
+                    <a href=""><img src="../assets/images/instagrampersona.svg" alt="icon"></a>
+                    <a href=""><img src="../assets/images/twitterpersona.svg" alt="icon"></a>
+                </div>
+            </div>
+        </div>
+
+        <form action="">
+            <p class="head">Get your Money Style action</p>
+            <div class="group">
+                <label for="current">Select your current style:</label>
+				<select class="current" id="current" name="current"  required >
+
+						<option value="">Please Select</option>
+						<option value="collector">Collector</option>
+						<option value="splurger">Splurger</option>
+						<option value="scrooge">Scrooge</option>
+						<option value="dodger">Dodger</option>
+						<option value="abbot">Abbot</option>
+											
+			    </select>
+            </div>
+
+            <div class="group">
+                <label for="goal">Select your goal style:</label>
+				<select class="goal" id="goal" name="goal"  required >
+
+                    <option value="">Please Select</option>
+                    <option value="collector">Collector</option>
+                    <option value="splurger">Splurger</option>
+                    <option value="scrooge">Scrooge</option>
+                    <option value="dodger">Dodger</option>
+                    <option value="abbot">Abbot</option>
+											
+			    </select>
+            </div>
+
+            <!-- <div class="group">
+                <label for="name">First and Last name</label>
+                <input type="text" placeholder="Please enter your first and last name">
+            </div>
+
+            <div class="group">
+                <label for="name">Email address</label>
+                <input type="text" placeholder="Please enter your email adress to receive your result">
+            </div> -->
+
+            <!-- <button id="myBtn" disabled class="submitt" type="submit">Get Money Style actions</button> -->
+            <button id="open-btn" disabled class="submitt" type="submit">Get Money Style actions</button>
+            
+            <br><br>
+            <!-- <p class="explain">
+                Would you like your Money Style to complement your partner's? Click <a href="/quiz/couple.html">here</a> for some free tips. 
+            </p> -->
+        </form>
+
+        
+
+        <!-- <div class="result total totalDiv">
+            <p>Your result</p>
+            <ul class="loadUi">
+                
+            </ul>
+        </div> -->
+        <div id="modal-background" class="result total totalDiv" >
+            <div id="modal" >
+              <span id="close-btn">&times;</span>
+              <p>Your result</p>
+              <div class="test" >
+            <ul class="loadUi"></ul>
+
+            <!-- return to page buttton -->
+
+            <button type="button" class="buttony">
+              <span class="button__text">
+                  <a href="https://vested.ng/html/result.html">Return to your result page</a>
+              </span>
+              <span class="button__icon">
+                <!-- <ion-icon name="cloud-download-outline"></ion-icon> -->
+                <img src="../assets/images/fullarrow.png" alt="">
+              </span>
+            </button>
+     
+            <div class="img-img"  style="position: relative;" >
+              <a class="" style="text-decoration: none;" href="https://vested.ng/html/couple.html">
+                <img class="img-two"  src="../assets/images/couple.svg" alt="">
+                <div class="foot-text" >
+                <p class="p-text" style="color: white; font-size: 14px; padding-left: .7rem; line-height: 1.2; margin-top: 1rem; margn-bottom: 2rem; " >
+                 <b> Would you like your Money Style to complement your partner’s?
+              Click here for some free tips.</b>
+                </p>
+                </div>
+              </a>
+              </div>
+            </div>
+          </div>
+            </div>
+          </div>
+    
+    </div>
+
+    <!-- <script>
+  let openBtn = document.getElementById('open-btn');
+  let modalBackground = document.getElementById('modal-background');
+  let closeBtn = document.getElementById('close-btn');
+  
+  openBtn.addEventListener('click', function() {
+    modalBackground.style.display = 'block';
+  });
+  
+  closeBtn.addEventListener('click', function() {
+    modalBackground.style.display = 'none';
+  });
+  
+  window.addEventListener('click', function(event) {
+    if (event.target === modalBackground) {
+      modalBackground.style.display = 'none';
+    }
+  });
+    </script> -->
+    <script src="../assets/scripts/p.js"></script>
+   
+</body>
+</html>
